@@ -1,0 +1,14 @@
+<p>alumno</p>
+<button (click) = "onClickActivar()">
+  <div [ngSwitch]="activo">
+    <p *ngSwitchCase="true">Ocultar</p>
+    <p *ngSwitchCase="false">Mostrar</p>
+  </div>
+</button>
+<div *ngIf = "activo">
+  <ul>
+    <li *ngFor="let obj of alumnos">
+      {{obj }}
+    </li>
+  </ul>
+</div>
