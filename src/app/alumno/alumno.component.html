@@ -1,0 +1,9 @@
+
+<p>Alumnos</p>
+
+<h3 *ngIf="consultando" > Cargando....</h3>
+
+<ul *ngIf="!consultando" >
+  <li *ngFor="let a of alumnos" (click)="onRemoveAlumno(a)">{{a}}</li>
+</ul>
+
